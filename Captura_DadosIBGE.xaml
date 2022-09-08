@@ -1,0 +1,281 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Captura_DadosIBGE" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="TabelaDadosCorreio" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1788,3418</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="78">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Data.SQLite</x:String>
+      <x:String>System.Data.Common</x:String>
+      <x:String>SQLite</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SQLite</AssemblyReference>
+      <AssemblyReference>SQLiteActivities</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="708,3353" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="C:\Users\lucas.marte\Downloads\Treinamento\Tabela.CSV" Name="CaminhoCSV" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: https://cidades.ibge.gov.br" sap:VirtualizedContainerService.HintSize="666,3259" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2867820e-a0d8-4485-b1ef-bdf73163db59" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Capturas IBGE" sap:VirtualizedContainerService.HintSize="632,3035" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="Cabecalho" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:BuildDataTable DataTable="[Cabecalho]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="590,61" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Cidade&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Prefeito&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Gentilico&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Codigo_x0020_Municipio&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;População_x0020_Estimada&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:WriteCsvFile AddHeaders="True" DataTable="[Cabecalho]" Delimitator="Tab" DisplayName="Write CSV" FilePath="[CaminhoCSV]" sap:VirtualizedContainerService.HintSize="590,172" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[TabelaDadosCorreio]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="590,2626" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556,2500" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="TabelaCSV" />
+                      <Variable x:TypeArguments="x:String" Name="CidadeReplace" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="514,2404" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Loop" sap:VirtualizedContainerService.HintSize="476,2145" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="Codigo_Municipio" />
+                            <Variable x:TypeArguments="x:String" Name="Gentilico" />
+                            <Variable x:TypeArguments="x:String" Name="Prefeito" />
+                            <Variable x:TypeArguments="x:String" Name="Pop_Estimada" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,67" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[CidadeReplace]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[CurrentRow("Localidade").ToString.replace("/MG","")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,230" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2867820e-a0d8-4485-b1ef-bdf73163db59" Text="[CidadeReplace]" Timeout="3000" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/" DesignTimeRectangle="885, 198, 981, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='busca__input ng-valid ng-dirty ng-touched' aaname='' /&gt;" Guid="fd5fdae6-5ffe-49aa-b9ea-24f1219b07b3" ImageBase64="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" InformativeScreenshot="735638d3d843696bc0bd18919a546d4d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://cidades.ibge.gov.br' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Formiga'" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2867820e-a0d8-4485-b1ef-bdf73163db59" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/" DesignTimeRectangle="909, 268, 94, 28" ElementType="Text" FriendlyName="'Formiga'" FullSelectorArgument="&lt;webctrl aaname='CidadeReplace' tag='SPAN' /&gt;" FuzzySelectorArgument="[&quot;&lt;webctrl aaname='&quot;+CidadeReplace+&quot;' tag='SPAN' type='' class='busca__auto-completar__resultado__item__nome' check:innerText='&quot;+CidadeReplace+&quot;' /&gt;&quot;]" Guid="2d80c0ad-7886-46b6-a210-a50d037c3c6f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAgCAYAAADpNa1pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARKSURBVGhD7VlBa9tKEO5/8u8Q+GzIueYdBLnG9BDTiwPFBBp6KA4UU6gvRT0EFYoKBeciH4weGBQoCgR0eCAwCHIQBL7OSqvVSlrZVmK/yqCB75Ad7c7sfuPZ2cmrTqeDFn8fLRENQUtEQ9AS0RC0RDQELRENQYGIMewQ9eTekOYfGb55fBMeDJX+f0RLRCxNJuLBwuDNYDtOe9L8I8NREHHMkX6EaIloCA5DxMkI5tJHGPG1mEQhgpWFyZlW/j5NEaGN8dkM7jr5E08RwjsDA8kv71sH2tkU8/sQ0VMyhidaeznDoJust01fsluRmnoXBuziOisTo5MOxovEoXAxLs1j+zcWHsJH+QDYEQTwbqdlPwh7J0L/5CBIHVfJUwDnk56fJ4gIEOR9B+5m0CS//IWN1MWiROTz4NKutM/0usquggiddEVXhEQe7JWaCG2DfSFrCrgCGfsl4p10SJGP+fUQ/dhgD8PrOXyxsxD2O2meOBAmIZzPAzp8isjzCa7O2TeSX0z42j0292SIGT+UWNghhB7M93qs116PYT2khiM4H1R2C0SczxFwTbzWZT/2h61lrIQmlhwR3Snc1JTkA9P1Tq9g/s789L/3s3mEaiJ2EJYmsrl9mA9cQRFjnMo6jlMDXurog4l+Oi4REdwOy/NyfgWYx+RI6NK6XEtbhFW0Len9H9IBKInQMLvjwyxVltKIJtISE5mI/nefjyp8iDHEnPMY/TvJ6fZHhLRZ9WEm0H+mEUXO/sPHxYHQL+Uy/30CyS/fyghU6YlgFr1V+lwEq4ioIk1Gl+4xnn7k9SZLuk9YoCl9TGDcJ/OKGaeaiB3eETpdWmIu5cZkatVhclxk6cv9zMeqUoRA5lcxkor6Ys7eqFfZlfdxwcdK0MSvX20vRQ86ndPo2oC1cOGvRW6uQUTdO0JsyoepqAoyZBEnflE1iKh10Nv0KrtbfUkw5emrZE9VMaqkJeKARMh3IBMqv+OS9bcL+4eJGV3eZu3UVJeIXVOTqKyogvnIx5pExLNTk1ys0P3HK63i3Pp3RF0idrysh7ebLusGELHLZd2hMrV0WUv7/zWQvpUxgfPIPzoYEXspXxtAxNbylYLpV/aWUBKhDEQNg5u0vCU5HBGEwoPO/rLhQXcptToaRQRBftAFLgzxoKPH4yLIvbiz9bI3AtufI/auof92Akt6zMVyUCII21scIdwvFS2OphBB2NjiWPvweYqR19OunSwQVRK6sJacrbWNkWRv70QwsFaAuQpKTT9/aWL8ekPTr0FEMPQuTLj/KZp+3Wp7pTkk0dqD/XWUtDs+OJzgfIegQESL3ZAR4d8oAusZaIkoITnk6DGCd6OumrSPaVTTXSc3L1+AlogSpKopCqjgGGWtnBMdV1/d7A70rXxb/QVoiVCh+EJWSeBgquywPg8tEVXg/2ULCk2jiCom5+dE+V+2l6AloiFoiWgEOvgDLd6jeSOA52oAAAAASUVORK5CYII=" InformativeScreenshot="9958e8343fbc71aada83c461fcbcdb17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://cidades.ibge.gov.br' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="1086, 272, 41, 28" ElementType="Text" FriendlyName="'MG'" FullSelectorArgument="&lt;webctrl aaname='MG' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='MG' tag='SPAN' type='' class='busca__sigla' check:innerText='MG' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAgCAYAAACGhPFEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIMSURBVFhH7ZdRcoIwEIZ7J0YfndHxxRm9oVwETwFH0CvwvuUPDWySPxC0jaVTpt9MMSH7ddls7EdRFLI2/rb0ZrOR3W4nx+NRTqeTnM9nuVwuT4PnsQ7Ww7pYn8VlzEpvt1s5HA408HeDOIjHPDST0sjAqxldCuIhLvOxRKX3+z1dNBeIz7wAlX63sCUmHkjj1bAF3gUrFUcamyB3Dc8BH39zOtK5usRS4KU9B2n0SfaApmxaEblLRcZ6qm60ux5VOHatBU87F5sXQffxQTqllo1023Y/tZRkvHpgLJSpHjBspb7q+aXU5q+YSsKIru1BGicTm6zppWupOzlXAHRZNmOe9A25Z/NBL942JRlzgV8gjSOVTdZY6RIiXjYxhuAmq2rMv38W+AXSKV1jkDa1q18rMtZn05Xsa/x+G9d4FvgF0myizyjdyw0y2GTq82lpW8vq+np2nMMJpJdlurtXJWJLA78vzbSz5gQ004tq2tzbEhlLA3P8GvbvfVKlaU0v6R42gCmRZiwN+5kjOdk90qVp90jv02MAcw8l1bJYZu28WG2nbFTap5NPRJ0Vc8q5WYyWw0+ciGB13z3AKr/lgZTazomuZUsgDVb3n4vl3eIxYRCVBng1uWsc8VhJaCalATZBrq6COP6mY8xKW9AnkQGcTDhSX30DeB7rYD2sq/vwHMnSv4l/6TwU8gmKFvX+LkTUdQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NGetText DisplayName="Get Text 'Código do Município'" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="2867820e-a0d8-4485-b1ef-bdf73163db59" Version="V1">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/mg/formiga/panorama" DesignTimeRectangle="370, 383, 194, 22" ElementType="Text" FriendlyName="'3126109'" FullSelectorArgument="&lt;webctrl parentid='dados' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dados' tag='P' type='' class='topo__valor' /&gt;" Guid="7c421a08-b0b1-40ea-84f4-8c001916db70" InformativeScreenshot="dd51d81fce893abe13f85e2b58ba76d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://cidades.ibge.gov.br/brasil/mg/formiga/panorama' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="370, 361, 194, 22" ElementType="Text" FriendlyName="'Código do Município'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='topo__titulo desktop' aaname='                     Código do Município                 ' check:innerText='Código do Município' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMYAAAAaCAYAAADsZyMJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAcUSURBVHhe7VtBTxs7EH7/o/8hR06ceuLIKSdOPXLjFAUVhCCtEKoQlfq0FRAt5WmVlkhEUYUeNI2CoEQPJUWiES0KfSJtI/7GvBnbu+v1ejchm0La58N3wJ5Ze8b+xjN2+OPm5gYMDAyCMMQwMNDAEMPAQANDDAMDDQwxDAw00BOj+xVO9sows5yHscwGPECkHtswvVmDkyuNvILGzjbTmdr9rO0P4xRyNM7mqd92XGLfyB3LcveMiwpMkV2lS33/ADjY5P59kMnDyj96GYbzfUgzuTvwSSI7P4H1hObpgN3S9cfhEuxl1F2uQEvbf3cIE6NVg8wiX4D08zLY7+pQPjwCe6sAk1lsz9q4MNdBHRndJqzMc+MaXU2/FoYYhId/nWllCG6wuROfJLGz/hYekm7fQVHGqBLjWxNyCzixLLL9vBsQZLiqi/4CFNtKn0CnWoQU6d8qWmiIMYr4acSwIU1Rdv4t1DQybhSeXLLvhhgD4zuUX2J28ew2QXE0ESCGG5Uy76NPhM77IkwsFmCtHnNq3Br/d2I4YO1gQIlKp1gaZYP1egRP0d8UEjEwKi3hImVLcDAA29unNcit+jXJ+JM3sFbVbKAfl1B+VYCJWVeuCHbzqL9UqtuGA+cNpIXu2BLqnp7pj18ah2Qfc9kHs/m+aySGK/yutQ3jlD6i/sRqGQ5OIojxpQ5rz33ZsYUC5PbOoN2HH11i2B8/wBzqT77+FJJhAWtpHxoan7RKDte/COqESeynKY1z9Le7Vtk8pK1K0C9RAaAPO7k9uIc8PX/ck2YFMrTHaNzZbZhx6oqPIlKpBP4dFD4xvlThEU3Y+gAdSaAfNMoF5uQUnSR7WJO8q0CODMS2tHPmf6/7GexnvH1qswJFql02HRhDg1M0diwxLsHR6eLfKXKY7MxrPIFEncRl6+A4okZaeANFdROpIH2WMtow7dSwxqrB2prNxqF5yhumc1zm3511IFc68mVRbuLFUc9c2SPGBU9DGAECMiKNIsIMgxjzNkzgfFUfBvynI0arAo+i7NxqemscSQx13PVtppt6VpV8FCZGUv8OCp8Ywhm3Tme+8UhHxgTzyms4WM+jk7bBOudtrP7AMR6VgoVZAxeX2uOIEaXb2itwXcmZPCXMw9yhku7h4pKNqZfx5Of66iUD2rPJc3x/w4gbmHncCNe+PqGxSxt2A+aq3wPtKnxi8DSVxrU+SjIsjRI+HAYxNH6pvaJ1kr4R0m2Ds4q62SKUA3bSGtswvliC8r+8LZIY+L3Quod8pBIjuX8HRWJi8MWkukQzwY/7MIl9bnpwsC6cph6B3TrMqWMHNgFGUwv7dWmedAvmOZOO61DkJYjvZHCBv6l9LvBUe4oyT5Hoap8glrdhFPsCwICRIZt6nMAyMVwd+XuMpE+ELUMhRtiH7b8L/Lsnok3VvarBDP4dd2vmIvrEeAs1de2EvSk8cQKy7loOwb+DwieGMP62A0UuDINcVKvRQIboiyRGH7peX3whHz9fQpw+7/M2jGaj+oibs48AMVziukQQETO9IzbGsIghyxHU76q6oW9FI5IYWj+cKUFNkR2CfweFVHyLgXoV30igzAIWTru8dojdaIGTIM4Q0XcHxGjsUpp0F8QQJ0+PhQsSwz2BRerENqSfiv62xPDqDEV2CP4dFBIxxLGNE4m7ruULsQHTe232961SKeY0TRrTxQ1HdUokMWJSqVDUSZpKicXR6asbZNipFLUJPRqD+do7PRCRxFDqEoKY21CIEZNK0fqnHiN5xfiRxNC90YjvjnYqRejxwNdp7vObiQUpX8QJxhffNqw1eZtbQKuvosy5ZGQkMXxdtYDrHJbYS6scOXoW3y+OoC23K4jSb7zmgcPfbL2Lw5n9r4F2FSFiuORdLrGbPS+NIugiqGhzAxVHFwtq9aIgATHc4lu1k24Z3U0v1j6SGDp/Mh/lYaWuyMpBLqF/B0WQGIRWFabFO4H/k5AaWJa41pstgKO8asdd105unUqMRrKIm530uubKNYYY5DTtdW3WhonAiYGIu67VzD8E71o52XXt2Gq15wtwmBg8UNDc5Rs9Bh0x3MCEfsjsSOMvoF8Cc01CDIR6XSut8cy+T8poYhBcfx6B9ae4csU19/eHSozk/h0UYWIQxOPY1GKeTYCMGqO6wqlD64dGHtH3Ax/9QLFU9B7e6LFm5bDJHRJLDIT2cfBMn2smfeCLeYgMbBjCMB745BrBvQiR0yiCzicEHH9FfbCj4BCYa0JiEBQ7aY2tk2DEjiZGCYrSA5/eR2FiMNzrA98vi7hi2eD+EUPIEcYvQwwqMscXi6EfL7o1Rii6GYwIDDF+Li6qLMf16pjAzzzKUIu8ZTK4Xxhi/HR0mlTH2F6uyf556lV03WMwCjDEMDD4bWCIYWCggSGGgUEIN/Af1OM/crnk2PEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                            <uix:NGetText.Text>
+                              <OutArgument x:TypeArguments="x:String">[Codigo_Municipio]</OutArgument>
+                            </uix:NGetText.Text>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text 'Gentílico'" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="2867820e-a0d8-4485-b1ef-bdf73163db59" Version="V1">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/mg/formiga/panorama" DesignTimeRectangle="577, 383, 161, 22" ElementType="Text" FriendlyName="'formiguense'" FullSelectorArgument="&lt;webctrl idx='2' parentid='dados' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='dados' tag='P' class='topo__valor' /&gt;" Guid="049426a7-b96f-48b3-8832-4b7b46e1f5fd" InformativeScreenshot="91a038864d8ed0369e11903b2dcb8957.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://cidades.ibge.gov.br/brasil/mg/formiga/panorama' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="577, 361, 161, 22" ElementType="Text" FriendlyName="'Gentílico'" FullSelectorArgument="&lt;webctrl idx='3' tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='H3' class='topo__titulo' aaname='                     Gentílico                 ' check:innerText='Gentílico' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKUAAAAaCAYAAADWt5x6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQxSURBVHhe7ZpNT9tYFIbnf/AfWLJi1VWWWbFilWV2rFAQrSIUqioL5EozyoghMs3ICm2qsawqmtAIGUFjEcF0SqMCMoygNMrfeHuufe36K0zIBHA7Z/Es7pft6D6+59zr/DQYDMAwaYKlZFIHS8mkDpaSSR0sJZM6hkpp/70H5XkN2eXfMLXoMrtSw4K2h8Pz5DH3yeGrmvNM83+cOOWerlFZg/pJ9vnUxrxo189C45j0E5eyb8NYVzFNEzq9rGHxlQlj14Lxtg2lomG2QIIWaihbl+Fxd0Ifvf0WFreOwvX9I5Sf0HM8a+Ow79axlD8OESmvYW6qzgqU23oPW054iLN3eFwkIYpvYCa1T5QuSvQsUxvdUP3VTgPTBRKw960uJiXz3RKW8riFObFCVt7hKlgfwW7WMbv6EtpxcvvkSJYyCZbyxyEkpfl7lSa2SqE53GlkziwnD3VCPMk0U6yjvBMNn55oFuxOCwurVSdVmFqqIv/CQu+L7CfDr5fPCkr7sm1fD5eJUcO33TVRWqtiRl5TvFxK9Bn7F+g0deRFRBD9ClXMPW/COO2H+zF3QkDKM6jPxCTo2B4nLPfayDn5poq8JvJQE4ri5qY53d2MuEgpiyoyCX0f0arorNKfT2DuNpEXfRUSgvLaji2vMaaUVzQuQ3XTK3UoTTdPLjm/mZ7RkP36J9DW3Los3Vej+zZ0HfNL4rfVoBxc+9dj7oaAlFIW2jz0Ah1Gw5YTGc7zBoNLbG+IHLWGih/q5X1ifb1r0Evh1w0J3+NI6W2OVlv+5sitP3Fexky5hQ6VnXxVjJO7ep9LC4+98cF6ZuKMJmVCKHXwZDndQU6Uk3JROTa79VHWyfs8pZ1zpK+bPmjQTr26CUp58AaPqLzw54U/Js41jIr4bQ0Yn+Pth1viBVNR+SvexkyOgJS0YjwVExJcqSTnXVQ2DZQ9ftWcCfZl6RjO6pJdl8dHIWQIXrfk9YbLH9+sTFDKhDFxZAozLFqMdA3mv5Kw0RlhJfBWTk8WOVk34k/0dyzlLkt5H4SkHPVIKCalDN+xPCyRB5LyhvAtwvJMUYfxD4fvNBCWcpTD8/P3UH92+3yT5SMqq1Smid2+DPf3drxzrz/IuttIeYSS2NH7oV8yjpQJX4EcvA3Mmgmbyv+60Sk2nQ1RqI2ZKBEpif4FhfGaMzHOZ0atjYbIDYOfGakt+0sbneA3cO9IaElDSd+jXHIP6mYdWVEXkvU2Uspw+qSOylsLZk8ex4wjJRE7EmpSvrtC1y+oUA7kuBuPhFS65318Xv1/E5dSctXrQt0gqbwDZGKmWMPCZhvbnhxRTt3D84yYQDH5yyryG2ZY3ltJSc9hNZGTfwrxd/BjSimIHp5n1nQ0jiOH4nx4/qAMlZJhHgqWkkkdLCWTOlhKJnWwlEzqYCmZ1MFSMiljgK/CthgCKU4kJwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                            <uix:NGetText.Text>
+                              <OutArgument x:TypeArguments="x:String">[Gentilico]</OutArgument>
+                            </uix:NGetText.Text>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text 'Prefeito'" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="2867820e-a0d8-4485-b1ef-bdf73163db59" Version="V1">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/mg/formiga/panorama" DesignTimeRectangle="370, 468, 535, 22" ElementType="Text" FriendlyName="'EUGÊNIO VILELA JÚNIOR'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app&amp;gt;shell&amp;gt;div&amp;gt;div&amp;gt;panorama-shell&amp;gt;div&amp;gt;section&amp;gt;panorama-resumo&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='3' parentid='dados' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='topo__valor' parentid='dados' tag='P' /&gt;" Guid="b9b7ad53-71c1-43c0-abe1-a33f915ddeee" InformativeScreenshot="0255d6a74501eeee0f0ba569975422a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://cidades.ibge.gov.br/brasil/mg/formiga/panorama' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="370, 446, 535, 22" ElementType="Text" FriendlyName="'Prefeito'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app&amp;gt;shell&amp;gt;div&amp;gt;div&amp;gt;panorama-shell&amp;gt;div&amp;gt;section&amp;gt;panorama-resumo&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h3' idx='4' tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='topo__titulo' tag='H3' aaname='                     Prefeito                 ' check:innerText='Prefeito' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAhsAAAAaCAYAAAAe5J4xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASJSURBVHhe7dxBSxtpHMdx30ffg0dPe+pJPHny5Mljbj2JoktYYymllBS6dbHK2MBgbZYdhhDWNBsS6hqUuIttaJWsENeGvI3/Ps/MJJlJHrWpGd3S7+ED8jzP/GeEwPNjnueZsXa7LQAAAHEhbAAAgFgRNgAAQKwIGwAAIFaEDQAAEKtI2ChsvJR782YTyYw8sKtS/xwtMBpNKdu2/LDg32t868gw5nL+cztSMPQBAIC7ZQgbmzL3iyuPt8IcebASBIEnRam1okVubM+RcVV78vmuZCtVKbxvmsddYiBstM6k9taVVO50YCwAALhdhrBhi/UxOsjXlML6phc4lksXhv6vV3dsVTcjVt3cP7SPRZlVzznrEDYAALhrQ4QN5SAn979imeM6fti44r7DImwAAPC/MVzYCCbxexuHQduhpLxJ/VgKrzIyoYPIUkbW/grGn1Yl/SzT3YsxkdyWx6VwAPCv13094eWQhhTsHZlZCvoWNyXxanDfSGQZZc8J1dJC/0/rTPbzjiSSQd/Cpsw8y4t70orUAwAAozNU2Dh/u+NN0r03Bn5YuJ+0ZOKhK3blnVhbJSnrPR31oszpkLFgScIui1spSzpteXsz5pxPwfVq8q9UxV63VF1LlnNVNe5YGrqv9UmsJ34omE7nVW01zt6WaVWzf99IJGw0jsXNOTKtr1vX9z2S+r9+PftptF7WcWR2UT9jRtIHo10aAgAAvi8LG60LaRzsSsKbmLcl2+j0dd5MbIvdbdMawcSuakX2YTTVPXSwyMja+167aRmlkd9WbSrY/NYJJr7zPUcmVfvMmw/dtkjY0AzLKOelrBd0+uu1m1VZ/lFdv7ortXA7AAAYCUPYuMKCJculs1CBIGw8Kko9VKd9UpI53b72p5yH27UgCEy/7oWFwbChwor3ViMrrn4r0bnWcyrWI9W30gsH14eNC3HXLqvXltpr/81Kd/kHAACMjCFsmI6+7opd+dtfjgiN74aN9Wq0fd/13iL4yxh6aSQsL4m+awbDxpGk9BLMiuMtd/TXSKf1c6pwESylXB82goDSH4o6gn0eqT1DHwAAuJHhNogOCMJGd8NoYGCTpkFo4h8MG53lmav0xt84bFQIGwAAxCWesBEsowzsj7jEpcsoD4tftI/i+rDBMgoAAHclnrDR/iBrq6o9qQJAM9we2uD563G3zbRBtPYm4wWA1F7f10Sb6p7JlzKxuiv7QdtA2DCEnWs3iCbz3XoAAGB0YgobSufo66ItKeeduN6xWP/oan8IMYWN8NHX2Y2i9xnzrONK4ifdFg0hA2Gj81yr/p6PfX1S5sqjr4ZQAwAARiK+sKGd+B/1mtQTuho3vmRJYqMs+/9ExxnDhvb5VFx7R2ZDH+GafqoCxGH4RIwpbLSl9ntWZoL7zv8RfEODj3oBAHDrImEDAABg1AgbAAAgVoQNAAAQK8IGAACIFWED34XjF1MyNjamTMnPfE8FAG7VNx82epPImEy96H27A+jJyXzwG5nPmfoBAHH6psNGJ2jokBH+2zQW37HcPL8NALgzbfkPFd9bZyQbw0kAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                            <uix:NGetText.Text>
+                              <OutArgument x:TypeArguments="x:String">[Prefeito]</OutArgument>
+                            </uix:NGetText.Text>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text 'População estimada'" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="2867820e-a0d8-4485-b1ef-bdf73163db59" Version="V1">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/mg/formiga/panorama" DesignTimeRectangle="750, 587, 66, 24" ElementType="Text" FriendlyName="'67.956'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="83d014b3-d695-4447-9fc0-e8cb54f84e7c" InformativeScreenshot="0c1d13926b48da1212c594790858557d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://cidades.ibge.gov.br/brasil/mg/formiga/panorama' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="408, 580, 336, 38" FriendlyName="'População estimada'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='lista__nome' tag='TD' aaname='                                          População estimada                                                           ' check:innerText='População estimada [2021]' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVQAAAAqCAYAAADszaOwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUGSURBVHhe7drbcdswEIVh1acZl+NxJXIjqsMzenPSgNpgIOJC7GJBghRkKeb/8D1EBkBcFke0J4fL5TIAAO5HoAJAJ4fr9ToAAO5HoAJAJwQqAHRCoAJAJwQqAHRCoAJAJwQqAHRCoAJAJwQqAHRCoAJAJwQqAHRCoAJAJwQqAHTSFqhfp+F4OAyHiuPnxe73U84fbh7H4fRl/OxO5/ewzrfTcIn/fj+bbZ/pNq+P8/Tvy+fRzftjOGdtfpqfQ4dzEfWXjVfUZeVZup11fq1jJefhw7XL9zx+1tYfv9GqQDWDcwwzV0DPDJlHBeq47jBuXOcrXpRwPvJyP1/vQBXrC+eR16R/nmpX9A2hl9dr61jJZTi9+eA0f/6oesTLuz9QHf8W98S3ob0X8A4Dday58FvD1DYEXQrL8G/dTtVL21hBmMstTAlUaF0C1bw44Vs/UQXr+7gQVu1kgVaKOvRJba0CVoV/Y80/vonU2+S/xgXW2/jCeuv0+MZF1GPnbSrPTfs7juGfcfw8pzervK3/QoyML8bGvdTjnKy6aBxLCH2WvzB0gMZ122c6/1wjjOPcb+c/NyerHrELD3lDjSE1FVsoTqONuMAhHIp+awPVKvZi7GuYd9lvWqdx8Yy9aFmvKYyVr8+PVQZmPm8Zlo6xXtlmCu3UJj7bmdZSD5F87Oo5GWe55VwKVj9TWGfcz2o/1c600GZuTuOaCNQ96vY31NkQulFjFMERyF+/tgWqHCNSY1UuxDiv0LcIrkCO37Zei/4i8mSo1eYgGGsxA1XsoxGejn5e015WQtGPtfJcLJWz0vx+LgT4aPmZxVja3JwI1N1aFaj+jaMkiqqxiGtBIS9hpfAXAtVqm4gQWFH0eg9iMGy+tPU3ILE32XOr4WzMQe6vFfphfguBKlT2stpny7lYqns88XNQa9x4NuZY2tyc1tYWfo0uv/IL4aIsFfFYtMXbiiOKcWOghvmOFzXN23j+YtGH0ItCX/Gm1bjekhq7kAdUGCv7+VJwyJC7I1Ab9tK/zRmBOvZddy4mY325agBW+y19mRljaXNz0vWI3egfqNVCkxenuLiB//yeQLWDwn7+fNHXgkIEauN6S1bItfHzyvoac5D7uzVQ1+ylEagbzsU0E17FXgi1PbY/nx9LmZkTgbpf/QO19u2vxqgFmgirymXzfWuBOv/89HntQqSxagEQxk+ft63XIte6/PlEPdNYS59AbdzLcc/KvZRn3DiWpXJWMQCLM0wqYW0E3vJYSmVOIwJ1tx4QqEbgxcLO3mJim/xCl/30pXTiBczbiQIunzV95mSXy1+ivPDlpS9/Hj9zZudtzcFghYkKp2L9RpurEZi+372BunYvs3bpnNafS8EIr3LPK8JeTWsvg715rJwxp4RA3a2HBOooFHKiLky8uP7/KsZ2dhGmEBu5C6mLuSjg7KIGt7bFpXfiZYr0GuWz/c99HzvkkrmAEMIFT8o90HO80Rd5mqdfX9xfv9atgZq1U8+29lLulVvH5/ZzEYrw0numqbFC//RzcTYrx4oIVBjaAvUByov7RLcL0ByA+HFz4fWKCNTdIlCd9Aao3tbwIghU/CcI1Gi8tC80H0zEr+yvHFT5nw8I1D16WqC+ivR26qz6GzEAKLsPVADohUAFgE4IVADohEAFgE4IVADohEAFgE4IVADohEAFgE4IVADohEAFgE4Of/98DwCAe30P/wCu7A6GEtoxewAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                            <uix:NGetText.Text>
+                              <OutArgument x:TypeArguments="x:String">[Pop_Estimada]</OutArgument>
+                            </uix:NGetText.Text>
+                          </uix:NGetText>
+                          <ui:BuildDataTable DataTable="[TabelaCSV]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Cidade&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Prefeito&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Gentilico&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Codigo_x0020_Municipio&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;População_x0020_Estimada&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InsertSQL workflow" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="InsertSQL.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="InsertSQL">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;INSERT INTO Cidades (Cidades, Prefeito, Populacao, Codigo) VALUES ('&quot;+CidadeReplace+&quot;','&quot;+Prefeito+&quot;','&quot;+Pop_Estimada+&quot;', '&quot;+Codigo_Municipio+&quot;');&quot;" />
+                              </InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CidadeReplace, Prefeito , Gentilico, Codigo_Municipio, Pop_Estimada}]" DataTable="[TabelaCSV]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,205" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                          <ui:AppendCsvFile DataTable="[TabelaCSV]" Delimitator="Tab" DisplayName="Append to CSV" FilePath="[CaminhoCSV]" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="AppendCsvFile_1" />
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="480,27" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,588" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:BuildDataTable DataTable="[TabelaCSV]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Cidade&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Prefeito&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Gentilico&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Codigo_x0020_Municipio&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;População_x0020_Estimada&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CidadeReplace, &quot; Falha ao realizar a busca da cidade&quot;}]" DataTable="[TabelaCSV]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,205" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                              <ui:AppendCsvFile DataTable="[TabelaCSV]" Delimitator="Tab" DisplayName="Append to CSV" FilePath="[CaminhoCSV]" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="AppendCsvFile_2" />
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="ce40ac9d3109773cb8a2c512da05a4c0.png" Selector="&lt;html app='chrome.exe' title='https://cidades.ibge.gov.br' /&gt;" Url="https://cidades.ibge.gov.br/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

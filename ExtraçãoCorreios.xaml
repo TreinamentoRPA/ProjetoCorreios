@@ -1,0 +1,120 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtraçãoCorreios" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="SaidaCorreio" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1788,913</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="476,848" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Busca CEP" sap:VirtualizedContainerService.HintSize="434,754" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="c5f0c243-0f50-4300-ac0f-e1f0915a155c" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,530" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Digite um'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c5f0c243-0f50-4300-ac0f-e1f0915a155c" Text="MG[k(enter)]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://buscacepinter.correios.com.br/app/endereco/index.php" DesignTimeRectangle="457, 407, 575, 59" ElementType="InputBox" FriendlyName="'MG'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='' aaname='Digite um CEP ou um Endereço:' /&gt;" Guid="97044ac1-d37c-4ba4-b5c8-475851ceb6d0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAkMAAAA/CAYAAADjRswIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAW1SURBVHhe7d1RaxxVHMbhfkk/RG4KFsLeFIkQQiABFVLwQqshFBHSQEpDCUEQsVIjWmy0SKEttpYgDWirtBhp/+6ZPbM7ezJqBV3pzPPAS3dntr3+MTO7PRUN3xw+ilfevxanXr1oZmZm1rmlzkm90zSOofOf3239S2ZmZmZdW+qeWhVD7SG01XLMzMzM7GXcya6pg+hUulQ0fXKzeG9mZmbWlU13TtVB088ITT4wf+mg+sDz51U0AQC8dFLHpJ5JXdPWO1UHTU5Mtvn1D/mfAADohtQ3bd3TiKHRvbRUTgAAXTS5QtR4hmj8Iq/8uhkAQFecfFZ6uPKAZ4QAgK5KnVO2z4kYAgDosrJ9xBAA0Ctl+4ghAKBXyvYRQwBAr5TtI4YAgF4p20cMAQC9UraPGAIAeqVsHzEEAPRK2T5iCADolbJ9OhtDC/Nz+RUAwETZPmIIAOiVsn3EEADQK2X7iCEAoFfK9hFDAECvlO0z2xi6tRGLr23Ezfy2dLj3eiys7+d37X4/uh47G0uxvHC6Cp5qC4NY27gSXx0d50+JIQCgXdk+M42hnz5dGUbKmfjwVj4w5VF8dG4YNosX404+Mu1J3NgaxlIdQC1bvXQ7f1YMAQDtyvaZaQzd+GAULYub3+UjDY8/jrUqalbio8f5WMPNrUGOnjOxtrUf93+trwIdxy+P78VXe3tx40k+NCSGAIA2ZfvMMIaOYveNfBWn5VbZ0y/O5diZiwvf5oO1WxuxnENo/aBRPH9BDAEAbcr2mV0MPduP9Rw7C/OD2P4+H68cx2fv1efmYnX3MB9PJueat8H+jhgCANqU7TO7GDrcjtUUO4uD6irPcjNsnl2P9cHw3NLZ0WfevRpP86mIg7iQzs2/Hjs/5kMvQAwBAG3K9plZDNW3wVZ3r8b2UoqixoPS6Vtm6dzlq7GzPDzXvI3245V4MwXS4HzcyIdehBgCANqU7TOzGLpzafQA9PrB8PXls8PXk1tlNzfPDN+fje0HEfvr6SpQ4yHqOoZWrkTz5lmt+jp+Op/35t7oU2IIAGhTts+MYih/bX5+KXaPhm8fXKxuh41uld2O7cXhuaXRlaI6bsYPUdcx9Ce/TySGAIB/omyfGcXQd/Hha8NYGd/quje5VZbDaPXyvepMfHu+CpnxQ9TjB6/bv3Jfq6NIDAEAf6Vsn9nE0FG+uvPGlXiYD43iZRDvvJv+HN0iq9SfHT9EXV9VmoROGzEEALyIsn1mE0P5as/Ujy3Wt7/S8i2ykfztscZtsadf5t8gGizFzoPJf7nRJIYAgBdRts9MYuj+bnpgei7WPn2UjySHsbMyiqHxLbJK8XxRZXJ1aGEwiLcvX4/7T3IUPTuOh99fjQvpW2hiCAD4G2X7zCSGRt8QK39oMeLhJ0vD441bZNno22VzsX49H0ie3I7ttxr/OWvrTsfb10bBld4DAJTK9plJDFXfFps/F5/9lg/Uft6LtalbZCP1bxJN/TBj5TgOv7wY77w1iMXqhxiHG5yO5ZWVuLC3H3caD1iLIQCgTdk+s3lm6E8dxy/17a5/mRgCANqU7fM/x9B/RwwBAG3K9hFDAECvlO0jhgCAXinbRwwBAL1Stk9nYwgAoE3ZPmIIAOiVsn3EEADQK2X7iCEAoFfK9hFDAECvlO0jhgCAXinbRwwBAL1Sto8YAgB6pWwfMQQA9ErZPmIIAOiVsn3EEADQK2X7nIih58/zJwEAOiZ1Ttk+J2Lom8NH+eMAAN2SOqdsn0YMbVV/zl86yB8HAOiW1DnN7qk2ftHY5tc/5L8CANANqW/auufUK+9faxzYHL9O5ZQuJXmGCAB4WaWOST0zuSI03TtVB528dzb5gJmZmVm3Nt05VQelajr/+d2pE6M17qWZmZmZvdQ72TWpf5IqhpL2IDIzMzPr3uoQSsYxlKRLRdPPEJmZmZl1Z6lzUu9MRPwBSvK5FIVy7GQAAAAASUVORK5CYII=" InformativeScreenshot="08a5e2c316f98cdd7ce63e12f48c6448.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Busca CEP' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="457, 371, 311, 25" ElementType="Text" FriendlyName="'Digite um'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Digite um CEP ou um Endereço:' check:innerText='Digite um CEP ou um Endereço:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[SaidaCorreio]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Logradouro/Nome' ReferenceIdx='0' Name='Logradouro/Nome' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Bairro/Distrito' ReferenceIdx='1' Name='Bairro/Distrito' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Localidade/UF' ReferenceIdx='2' Name='Localidade'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='CEP' ReferenceIdx='3' Name='CEP'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Logradouro/Nome' attr='text' /&gt;&lt;column name='Bairro/Distrito' attr='text' /&gt;&lt;column name='Localidade/UF' attr='text' /&gt;&lt;column name='CEP' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="20" ScopeIdentifier="c5f0c243-0f50-4300-ac0f-e1f0915a155c" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://buscacepinter.correios.com.br/app/endereco/index.php" DesignTimeRectangle="838, 492, 77, 25" ElementType="Text" FriendlyName="'Próximo'" FullSelectorArgument="&lt;webctrl aaname='Próximo' parentid='navegacao-resultado' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Próximo' parentid='navegacao-resultado' tag='A' type='' class='botao proximo' check:innerText='Próximo' /&gt;" Guid="98d79d5b-66fc-445f-bba0-b89f07be98ab" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAdCAYAAADSFYAhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP1SURBVGhD7ZjPSxtBFMfzZ+TqsUePuXqUnnr06tGTBEFMLqWRXkIO0lMr4kWklC1LIKChaYqHhFqSQmgNrRhF1KAiCyKJaMK3b2be/l6rxqz9wX5gIPv27czsd968eZsYIh5MJOIQiEQcApGIQyAScQhEIg6BxxWx38bKSw2xdBmVDtv+A9wintYwmaSXnLZbfFbHWK6EV+s/0b5mvwExNtYQn9aRaVywZVBOoOVofjNr0I7Z9Adxi3i8iWcOAX1NTPqox873pNNEak7DxHqbDQ/hnxCRthubcHmO9l4DmXkW8kUVLb4VobhdRJNOA0m51QtY+QtW/2/i7iLSFpKHgimi07d/hspqAU84n05+NLdsD8Z2DZmcjhHpq2EkvYYM5Vejzy6CI9VXPLuJltNOdD8XKY9qSCw30aXr9npB9qOae0Ery2QTh9ZBE68W8tZ8RF6fXK5h63QX2vIaxmb5+Zk8pt413XMxOVe+iRnTV/SxifqZP53dKxKn5L0iSpd0bfkWkXzNA8lmvlgPrY0iEpbd3dyCkS+JI8Qa1/fZRhzXMCGEIGHqYkziVhGte3dvibc73ANz9BVT6WDfWJLG9JwLt4t4feHKifGFrzCE3fKlli5C2xdx0kP3zJARA4MmYkZmfgeGPNmv0D1oIMUTHM8fCqNClD9ZYafT+xv14L120URGjh0sYny+jNIRP3O5D21Bl3bRJnSey7WBuq4WzgoMiYHCgvIdyVVRN66UuXOIwiL34zkXbhDxhpYuoSQVdPrqyG75Q7yVz8tnRnkbutjawKh49rnnkHJE3sp7FXG+KJH8XsRn6ydsYRplaY/NU/SzSdKnfuRCO/o5qGJc+M5RIFnCMv0dZKnCiE3nsbjHNuJOIiaeqzzmqhODotbCXs1ULaAkosmn5LPOCFCoWpLHFiselK8GFfHlJtwFlifPE2J86bvUVAYXPVSW1BjJz3Zo3ONg8fBbX3NyGhXWbHIRLIKk8x0pTuYTH87Y6CU8Ea2cSzsoiKAxQhLRjsRAEW+MxAuapJ2/gpK44hEiMVDER41Eyok658RVf04zyxZvgu7WSjJXipN764v6LV7cv6XDExF7VYwJ37kN1L3jWrUy5cQDthGhiWjf15GqHqLLp7Pxo6oOD7rnelnzNLeiz45K/+ESooiOVJRYbKDV4dPZ2MGirBb8/YQnoqP2kwN72kiuZkeYVc6IPOgQgL63M7Ic8v5pEaaIBBX/5kL7WsD/ByGKKLjhi+XTruMrwRY7nq15XpK2+LeyKthdf5+FLKIg8IuFvnrO/TnaLWLEQEQiDgFLxKdvKipso3bnVt5WaSMS8QHNJ2LE4EQiDoFIxAcD/AJlRdLh3hjqvQAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Busca CEP' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="455, 551, 980, 1981" FriendlyName="'Resultado da'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="23c98fbf-031c-4106-872e-04994d63514d" InformativeScreenshot="9915f082f2b426292debf18c89f563f0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Busca CEP' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACusAAArrAYKLDVoAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAACGUlEQVQ4T2P4//8/RRirICkYqyAMM9hnHGWwSvrPYBz1n0E74D+zWfR/vhkXz6GoQeagYwa7DHOgAb8ZTKL/M2j4/gMa8E9s9b1/XLNuNsLVIGvAhhnMEyMZjCL/M2j5/xOasO+f1LZn/0VWP/jP1n/RGyyPrgEbZlT16OLOmfFfZNGlf6KLL/+X3PTov9Dye+/Y+y9GwxV9P8suCsQHfl9iufb3KtO1f9cYr/2/xnD//zOGfIaul578Hdv/C07Y91949un/Ysuv/5fY+Oi/4LL7s+AGvD3If+rzSa7/P86z/f99mfn/36uM///fYbjqNHmdNnvx0m+81Sv/87dv/S806eB/kXnn/outuNEE0gfWfGe1XOezHWL/3x/i+//lFOf/nxdY//+7yvhp7WFnLYaY6bc50yf95y5e8J+3bvV/ga4d/4WmHD4Cs5jh8VaJRVcWqv6/u1b2/4vdIv8/HOH9D/TKv/+vGVwYrCcXsYTU3WZP6L7MmT39MnfZ4st8jet38rVsEoQb8OMSW9ijTVJvLs5X//9gg/T/90cE/12fJ/J/Q6ZqP0wRPgwmfl5idb+7Rvb/taVq/28vFfu3MVPu364q5f+HWlXj0DWgYzjj00me2rurpP9tTJMEGiD/f3eV0v/DHWp/T07WtEbWgI5ROG928xzYlCH5cVO23FugAW+BBnw6NVlzF7IadIxVkBSMVZB4/J8BACdcqL5abFdoAAAAAElFTkSuQmCC" InformativeScreenshot="205dfe3ef2dff1a3f45bd2ef8453bbd0.png" Selector="&lt;html app='chrome.exe' title='Busca CEP' /&gt;" Url="https://buscacepinter.correios.com.br/app/endereco/index.php" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
